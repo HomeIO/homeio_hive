@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Site:</strong>
+  <%= @meas_payload.site %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @meas_payload.name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @meas_payload.value %>
+</p>
+
+<%= link_to 'Edit', edit_meas_payload_path(@meas_payload) %> |
+<%= link_to 'Back', meas_payloads_path %>

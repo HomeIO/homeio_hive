@@ -1,0 +1,2 @@
+module MeasPayloadsHelper
+end

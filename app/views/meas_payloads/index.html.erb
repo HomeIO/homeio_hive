@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Meas Payloads</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Site</th>
+      <th>Name</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meas_payloads.each do |meas_payload| %>
+      <tr>
+        <td><%= meas_payload.site %></td>
+        <td><%= meas_payload.name %></td>
+        <td><%= meas_payload.value %></td>
+        <td><%= link_to 'Show', meas_payload %></td>
+        <td><%= link_to 'Edit', edit_meas_payload_path(meas_payload) %></td>
+        <td><%= link_to 'Destroy', meas_payload, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Meas payload', new_meas_payload_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@meas_payload) do |f| %>
+  <% if @meas_payload.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@meas_payload.errors.count, "error") %> prohibited this meas_payload from being saved:</h2>
+
+      <ul>
+      <% @meas_payload.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :site %><br>
+    <%= f.text_field :site %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :value %><br>
+    <%= f.text_field :value %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
